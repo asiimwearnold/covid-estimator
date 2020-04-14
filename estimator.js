@@ -64,10 +64,10 @@ const covid19ImpactEstimator = (data) => {
     (infectionsByRequestedTime[1] * totalAmtMoneyForMajority) / nOfDays
   );
 
-  const output = {
+  return {
     data,
     impact: {
-      currentlyInfected: impact.currentlyInfected,
+      currentlyInfected: impact,
       infectionsByRequestedTime: infectionsByRequestedTime[0],
       severeCasesByRequestedTime: severeCasesByRequestedTime[0],
       hospitalBedsByRequestedTime: hospitalBedsByRequestedTime.va1,
@@ -77,7 +77,7 @@ const covid19ImpactEstimator = (data) => {
       dollarsInFlight: dollarsInFlight.val1
     },
     severeImpact: {
-      currentlyInfected: severeImpact.currentlyInfected,
+      currentlyInfected: severeImpact,
       infectionsByRequestedTime: infectionsByRequestedTime[1],
       severeCasesByRequestedTime: severeCasesByRequestedTime[1],
       hospitalBedsByRequestedTime: hospitalBedsByRequestedTime.va2,
@@ -87,8 +87,6 @@ const covid19ImpactEstimator = (data) => {
       dollarsInFlight: dollarsInFlight.val2
     }
   };
-
-  return output;
 };
 
-module.exports = covid19ImpactEstimator;
+export default covid19ImpactEstimator;
