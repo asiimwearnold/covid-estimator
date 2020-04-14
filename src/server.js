@@ -49,7 +49,7 @@ app.post('/api/v1/on-covid-19/xml', (req, res) => res
   ));
 
 app.get('/api/v1/on-covid-19/logs', (req, res) => fs.readFile(
-  path.join(__dirname, '../access.log'), 'utf8', (err, data) => res
+  path.join(__dirname, 'access.log'), 'utf8', (err, data) => res
     .type('text/plain').status(200).send(data)
 ));
 
