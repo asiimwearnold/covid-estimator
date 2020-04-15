@@ -67,7 +67,7 @@ const covid19ImpactEstimator = (data) => {
   const output = {
     data,
     impact: {
-      currentlyInfected: impact,
+      currentlyInfected: impact.currentlyInfected,
       infectionsByRequestedTime: infectionsByRequestedTime[0],
       severeCasesByRequestedTime: severeCasesByRequestedTime[0],
       hospitalBedsByRequestedTime: hospitalBedsByRequestedTime.va1,
@@ -77,7 +77,7 @@ const covid19ImpactEstimator = (data) => {
       dollarsInFlight: dollarsInFlight.val1
     },
     severeImpact: {
-      currentlyInfected: severeImpact,
+      currentlyInfected: severeImpact.currentlyInfected,
       infectionsByRequestedTime: infectionsByRequestedTime[1],
       severeCasesByRequestedTime: severeCasesByRequestedTime[1],
       hospitalBedsByRequestedTime: hospitalBedsByRequestedTime.va2,
