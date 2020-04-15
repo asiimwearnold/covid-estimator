@@ -64,7 +64,7 @@ const covid19ImpactEstimator = (data) => {
     (infectionsByRequestedTime[1] * totalAmtMoneyForMajority) / nOfDays
   );
 
-  return {
+  const output = {
     data,
     impact: {
       currentlyInfected: impact,
@@ -87,6 +87,8 @@ const covid19ImpactEstimator = (data) => {
       dollarsInFlight: dollarsInFlight.val2
     }
   };
+
+  return output;
 };
 
 module.exports = covid19ImpactEstimator;
